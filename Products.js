@@ -8,15 +8,13 @@ import "./Products.css";
 
 function Products() {
     const role = localStorage.getItem("role");
-    
-  // State for storing products
+
   const [products, setProducts] = useState([]);
-  // Edit States
+  
 
 
-  // State for search input
   const [search, setSearch] = useState("");
-  // Edit States
+ 
 
 const [editingId, setEditingId] =
   useState(null);
@@ -27,7 +25,6 @@ const [editTitle, setEditTitle] =
 const [editPrice, setEditPrice] =
   useState("");
 
-  // Fetch products from Fake Store API
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
       .then((response) => response.json())
@@ -37,13 +34,12 @@ const [editPrice, setEditPrice] =
       );
   }, []);
 
-  // Filter products based on search
   const filteredProducts = products.filter((product) =>
     product.title
       .toLowerCase()
       .includes(search.toLowerCase())
   );
-  // DELETE PRODUCT
+
 
 const handleDelete = (id) => {
 
@@ -56,19 +52,15 @@ const handleDelete = (id) => {
   setProducts(updatedProducts);
 };
 
-// EDIT PRODUCT
 
 const handleEdit = (product) => {
 
-  // set current editing product
   setEditingId(product.id);
 
-  // set existing values
   setEditTitle(product.title);
 
   setEditPrice(product.price);
 };
-// Save Edited Product
 
 const handleSave = (id) => {
 
@@ -92,7 +84,7 @@ const handleSave = (id) => {
 
   setProducts(updatedProducts);
 
-  // close edit mode
+  
   setEditingId(null);
 };
 
@@ -100,19 +92,18 @@ const handleSave = (id) => {
 
     
     <div className="products-container">
-      {/* Page Title */}
+     
       <h1 className="products-title">
         Products
       </h1>
 
-      {/* Search Bar */}
+     
       <SearchBar
         search={search}
         setSearch={setSearch}
       />
 
-      {/* Products Grid */}
-      {/* Admin Add Button */}
+      
 
 {role === "admin" && (
 
@@ -127,15 +118,14 @@ const handleSave = (id) => {
         {filteredProducts.map((product) => (
           <Card key={product.id}>
             <div className="product-card">
-              {/* Product Image */}
+              
               <img
                 src={product.image}
                 alt={product.title}
                 className="product-image"
               />
 
-              {/* Product Title */}
-              {/* Edit Mode */}
+              
 
 {editingId === product.id ? (
 
@@ -179,7 +169,7 @@ const handleSave = (id) => {
 
 )}
 
-              {/* Product Details Link */}
+              
               <Link
   to={`/products/${product.id}`}
   className="product-link"
@@ -187,7 +177,6 @@ const handleSave = (id) => {
   View Details
 </Link>
 
-{/* Admin Controls */}
 
 {role === "admin" && (
 
