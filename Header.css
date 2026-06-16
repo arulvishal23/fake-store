@@ -1,4 +1,3 @@
-/* Header */
 
 .header {
   background: linear-gradient(
@@ -26,7 +25,6 @@
   z-index: 1000;
 }
 
-/* Logo / Title */
 
 .header h2 {
   margin: 0;
@@ -38,7 +36,6 @@
   letter-spacing: 1px;
 }
 
-/* Navigation */
 
 .header nav {
   display: flex;
@@ -48,7 +45,6 @@
   gap: 20px;
 }
 
-/* Nav Links */
 
 .header nav a {
   text-decoration: none;
@@ -64,13 +60,11 @@
   position: relative;
 }
 
-/* Hover Effect */
 
 .header nav a:hover {
   color: #ffd369;
 }
 
-/* Underline Animation */
 
 .header nav a::after {
   content: "";
@@ -94,8 +88,6 @@
   width: 100%;
 }
 
-/* Logout Button */
-
 .header nav button {
   padding: 10px 16px;
 
@@ -116,8 +108,6 @@
   transition: 0.3s;
 }
 
-/* Button Hover */
-
 .header nav button:hover {
   background: #ffd369;
 
@@ -126,7 +116,6 @@
   transform: scale(1.05);
 }
 
-/* Mobile Responsive */
 
 @media (max-width: 768px) {
 
