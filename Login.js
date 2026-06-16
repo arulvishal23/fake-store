@@ -7,7 +7,7 @@ function Login() {
 const handleLogin = (e) => {
   e.preventDefault();
 
-  // ADMIN LOGIN
+
 
   if (
     username === "admin" &&
@@ -27,7 +27,6 @@ const handleLogin = (e) => {
     window.location.href = "/";
   }
 
-  // USER LOGIN
 
   else if (
     username === "user" &&
@@ -46,8 +45,6 @@ const handleLogin = (e) => {
 
     window.location.href = "/";
   }
-
-  // INVALID LOGIN
 
   else {
     alert("Invalid Credentials");
