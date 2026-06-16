@@ -1,0 +1,146 @@
+/* Header */
+
+.header {
+  background: linear-gradient(
+    90deg,
+    #667eea,
+    #764ba2
+  );
+
+  color: white;
+
+  padding: 15px 30px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 1000;
+}
+
+/* Logo / Title */
+
+.header h2 {
+  margin: 0;
+
+  font-size: 28px;
+
+  font-weight: bold;
+
+  letter-spacing: 1px;
+}
+
+/* Navigation */
+
+.header nav {
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+}
+
+/* Nav Links */
+
+.header nav a {
+  text-decoration: none;
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 500;
+
+  transition: 0.3s;
+
+  position: relative;
+}
+
+/* Hover Effect */
+
+.header nav a:hover {
+  color: #ffd369;
+}
+
+/* Underline Animation */
+
+.header nav a::after {
+  content: "";
+
+  position: absolute;
+
+  width: 0;
+
+  height: 2px;
+
+  background: #ffd369;
+
+  left: 0;
+
+  bottom: -5px;
+
+  transition: 0.3s;
+}
+
+.header nav a:hover::after {
+  width: 100%;
+}
+
+/* Logout Button */
+
+.header nav button {
+  padding: 10px 16px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: white;
+
+  color: #764ba2;
+
+  font-size: 15px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+/* Button Hover */
+
+.header nav button:hover {
+  background: #ffd369;
+
+  color: black;
+
+  transform: scale(1.05);
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 768px) {
+
+  .header {
+    flex-direction: column;
+
+    gap: 15px;
+
+    text-align: center;
+  }
+
+  .header nav {
+    flex-wrap: wrap;
+
+    justify-content: center;
+  }
+}

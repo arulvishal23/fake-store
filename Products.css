@@ -1,0 +1,250 @@
+/* Products Page */
+
+.products-container {
+  padding: 20px;
+}
+
+/* Page Title */
+
+.products-title {
+  font-size: 32px;
+  color: #222;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Products Grid */
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* Product Card */
+
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+
+  text-align: center;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+/* Product Image */
+
+.product-image {
+  width: 120px;
+  height: 120px;
+
+  object-fit: contain;
+
+  margin-bottom: 15px;
+}
+
+/* Product Title */
+
+.product-title {
+  font-size: 18px;
+  color: #111;
+
+  margin-bottom: 10px;
+
+  min-height: 50px;
+}
+
+/* Product Price */
+
+.product-price {
+  font-size: 20px;
+  font-weight: bold;
+
+  color: #008000;
+
+  margin-bottom: 15px;
+}
+
+/* Details Button */
+
+.product-link {
+  display: inline-block;
+
+  text-decoration: none;
+
+  background: #222;
+  color: white;
+
+  padding: 10px 16px;
+
+  border-radius: 6px;
+
+  transition: background 0.3s ease;
+}
+
+.product-link:hover {
+  background: #444;
+}
+
+/* Search Styling */
+
+.products-search {
+  width: 100%;
+
+  padding: 12px;
+
+  margin-bottom: 25px;
+
+  border: 1px solid #ccc;
+
+  border-radius: 8px;
+
+  font-size: 16px;
+
+  outline: none;
+}
+
+.products-search:focus {
+  border-color: #222;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .products-title {
+    font-size: 26px;
+  }
+
+  .product-card {
+    padding: 15px;
+  }
+
+  .product-title {
+    font-size: 16px;
+  }
+
+  .product-price {
+    font-size: 18px;
+  }
+}
+/* Admin Buttons */
+
+.admin-buttons {
+  margin-top: 10px;
+
+  display: flex;
+
+  gap: 10px;
+
+  justify-content: center;
+}
+
+.admin-buttons button {
+  padding: 8px 12px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  background: black;
+
+  color: white;
+}
+
+/* Add Product */
+
+.add-product-btn {
+  margin-bottom: 20px;
+
+  padding: 12px 16px;
+
+  background: green;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+/* Edit Form */
+
+.edit-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+
+  margin-top: 10px;
+}
+
+/* Edit Inputs */
+
+.edit-form input {
+  padding: 10px;
+
+  border: 1px solid #ccc;
+
+  border-radius: 8px;
+
+  font-size: 15px;
+}
+
+/* Save Button */
+
+.edit-form button {
+  padding: 10px;
+
+  background: green;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+/* Cart Button */
+
+.cart-btn {
+  padding: 10px 15px;
+
+  background: orange;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  margin-top: 10px;
+
+  margin-bottom: 10px;
+
+  transition: 0.3s;
+}
+
+/* Hover Effect */
+
+.cart-btn:hover {
+  background: darkorange;
+
+  transform: scale(1.05);
+}

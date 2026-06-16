@@ -1,0 +1,95 @@
+/* Posts Page */
+
+.posts-container {
+  padding: 20px;
+}
+
+.posts-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* Search Input */
+
+.posts-search {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 25px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+}
+
+.posts-search:focus {
+  border-color: #444;
+}
+
+/* Posts Grid */
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Post Card */
+
+.post-card {
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+  transition: transform 0.3s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Post Title */
+
+.post-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+/* Post Body */
+
+.post-card p {
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* Read More Button */
+
+.post-link {
+  display: inline-block;
+  text-decoration: none;
+  background: #222;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+
+  transition: background 0.3s ease;
+}
+
+.post-link:hover {
+  background: #444;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .posts-title {
+    font-size: 26px;
+  }
+
+  .posts-search {
+    font-size: 14px;
+  }
+}
